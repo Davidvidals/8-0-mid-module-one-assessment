@@ -97,16 +97,16 @@ console.log(filterByCountMinimum(animals, 2))
  * getMostCommonAnimal([]); //> null // returns null if the input is empty
  */
 function getMostCommonAnimal(animals) {
-  let total =animals[1].count;
+  let total = animals[2];
   for(let i = 0; i < animals.length; i++){
-    if (animals[i].count > total){
+    if (total < animals[i].count){
       total = animals[i]
-    }
+    } 
   }
   return total
 }
 console.log(getMostCommonAnimal(animals));
-// console.log(getMostCommonAnimal(null));
+console.log(getMostCommonAnimal([]));
 
 // Do not change anything below this line.
 module.exports = {
